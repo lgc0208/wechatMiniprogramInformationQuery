@@ -1,0 +1,13 @@
+<!--pages/userCenter/userCenter.wxml-->
+<mp-cells>
+  <mp-cell id="avatar" title="头像：">
+    <image class="userinfo-avatar" src="{{avatar}}" mode="cover"></image>
+  </mp-cell>
+  <mp-cell id="nickname" title="昵称: ">
+    <text style="margin-left:55vw">{{nickname}}</text>
+  </mp-cell>
+  <mp-cell id="sex" title="性别：">
+    <text style="margin-left:65vw">{{sex}}</text>
+  </mp-cell>
+  <mp-cell title="收藏管理" hover="true" link url="../collectInfo/collectInfo"></mp-cell>
+</mp-cells>

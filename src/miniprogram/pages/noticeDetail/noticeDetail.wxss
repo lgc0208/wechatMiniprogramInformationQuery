@@ -1,0 +1,25 @@
+/* pages/noticeDetail/noticeDetail.wxss */
+.setFont{
+  font-weight: bolder;
+  font-size: 18px;
+  margin-bottom: 4px
+}
+
+.infoFont{
+  font-size: 14px
+}
+
+.contentFont{
+  font-size: 13px
+}
+
+.icon{
+  position: absolute;
+  right: 10vw
+}
+
+.imagesize{
+  display:flex;                  
+  justify-content: center;         
+  align-items:center;              
+ }

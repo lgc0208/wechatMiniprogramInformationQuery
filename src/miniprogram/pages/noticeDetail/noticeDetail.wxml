@@ -1,0 +1,32 @@
+<!--pages/noticeDetail/noticeDetail.wxml-->
+<mp-cells>
+  <mp-cell class="setFont">{{title}} </mp-cell>
+</mp-cells>
+<mp-cells>
+  <mp-cell class="infoFont">
+    {{date}}
+    <mp-icon 
+      class="icon" 
+      icon="like" 
+      type="field"
+      bindtap="like"
+      color="#ff0033" 
+      size="25" 
+      wx:if="{{like === true}}"
+    >
+    </mp-icon>
+    <mp-icon 
+      class="icon" 
+      icon="like" 
+      size="25" 
+      bindtap="like"
+      wx:if="{{like === false}}"
+    >
+    </mp-icon>
+  </mp-cell>
+</mp-cells>
+<text class="contentFont" decode="{{true}}" user-select="true">{{article}}</text>
+<view wx:for="{{image}}" wx:for-item="imageUrl" wx:key="index" class='imagesize'>
+  <image wx:if="{{imageUrl.length !== 0}}" src="{{imageUrl}}" mode="aspectFill"></image>
+</view>
+

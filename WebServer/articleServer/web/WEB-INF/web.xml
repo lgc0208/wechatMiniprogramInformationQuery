@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name></display-name>
+    <servlet>
+        <servlet-name>notificationServlet</servlet-name>
+        <servlet-class>myServlet.notificationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>notificationServlet</servlet-name>
+        <url-pattern>/notificationServlet</url-pattern>
+    </servlet-mapping>
+
+    <display-name></display-name>
+    <servlet>
+        <servlet-name>announcementServlet</servlet-name>
+        <servlet-class>myServlet.announcementServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>announcementServlet</servlet-name>
+        <url-pattern>/announcementServlet</url-pattern>
+    </servlet-mapping>
+
+    <display-name></display-name>
+    <servlet>
+        <servlet-name>newsServlet</servlet-name>
+        <servlet-class>myServlet.newsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newsServlet</servlet-name>
+        <url-pattern>/newsServlet</url-pattern>
+    </servlet-mapping>
+
+    <display-name></display-name>
+    <servlet>
+        <servlet-name>lectureServlet</servlet-name>
+        <servlet-class>myServlet.lectureServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>lectureServlet</servlet-name>
+        <url-pattern>/lectureServlet</url-pattern>
+    </servlet-mapping>
+</web-app>

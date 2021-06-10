@@ -1,0 +1,9 @@
+<!--pages/collectInfo/collectInfo.wxml-->
+<mp-cells>
+  <mp-cell wx:for="{{collectionList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+    <view style="font-size:14px;margin-bottom:8px">
+      <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+        <text style="margin:4px">{{item.date}}</text>
+      </view>
+  </mp-cell>
+</mp-cells>

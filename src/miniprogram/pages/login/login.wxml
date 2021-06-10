@@ -1,0 +1,26 @@
+<!--miniprogram/pages/login/login.wxml-->
+<view class="container">
+  <form bindsubmit="login">
+    <mp-cells>
+      <mp-cell title="用户名:">
+        <input name="username" type="text" bindinput="username" value="{{username}}"/>
+      </mp-cell>
+      <mp-cell title="密码:">
+        <input name="password" type="text" bindinput="password" password="true" value="{{password}}"/>
+      </mp-cell>
+    </mp-cells>
+    <view class="tip" wx:if="{{ flag }}">用户名或密码错误！</view>
+    <view class="requireFormat">
+      <text class="tip" wx:if="{{ unameNULL }}">用户名不能为空！</text>
+      <text class="tip" wx:if="{{ pwdVaild === false }}">密码必须大于六位！</text>
+    </view>
+    <view class="checkSpace">
+      <text class="tip" wx:if="{{ unameSpace !== -1 }}">用户名当中不得有空格！</text>
+      <text class="tip" wx:if="{{ pwdSpace !== -1 }}">密码当中不得有空格！</text>
+    </view>
+    <button form-type="submit" type="primary">登录</button> 
+  </form>
+</view>
+
+
+

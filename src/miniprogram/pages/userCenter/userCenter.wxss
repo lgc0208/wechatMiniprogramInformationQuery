@@ -1,0 +1,8 @@
+/* pages/userCenter/userCenter.wxss */
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin-left: 55vw;
+  border-radius: 50%;
+  left:80vw
+}

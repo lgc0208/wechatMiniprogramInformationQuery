@@ -1,0 +1,6 @@
+/* miniprogram/pages/login/login.wxss */
+.tip {
+  font-size: 12px;
+  margin: 4px;
+  color: red
+}

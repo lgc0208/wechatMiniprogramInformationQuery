@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAAA;AACA;AACA;AACA","file":"index.js","sourcesContent":["//through@2 handles this by default!\nmodule.exports = require('through')\n\n"]}

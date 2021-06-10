@@ -1,0 +1,81 @@
+<!--miniprogram/pages/index/index.wxml-->
+<!-- 搜索框，这部分可能需要向后端发起请求 -->
+<van-search 
+  name="needToKnow"
+  placeholder="想了解什么？" 
+  value="{{needToKnow}}"
+  bind:search="onSearch"
+  bind:cancel="onCancel"
+  bind:change="onChange"
+  bind:focus="onFocus"
+>
+</van-search>
+<!-- 分类展示板块，基于van-tabs & mp-cells -->
+<van-tabs 
+  animated="true" 
+  swipeable="true"
+  bind:change="changeType"
+  color="#4a90e2"
+  line-width="55px"
+  wx:if= "{{ !Isfoucs || !IsInput }}"
+>
+  <van-tab title="校内通知">
+    <mp-cells>
+      <mp-cell wx:for="{{noticeList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+        <view style="font-size:14px;margin-bottom:8px">
+          <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+          <text style="margin:4px">{{item.date}}</text>
+        </view>
+      </mp-cell>
+    </mp-cells>
+  </van-tab>
+  <van-tab title="校内新闻">
+    <mp-cells>
+      <mp-cell wx:for="{{newList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+        <view style="font-size:14px;margin-bottom:8px">
+          <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+          <text style="margin:4px">{{item.date}}</text>
+        </view>
+      </mp-cell>
+    </mp-cells>
+  </van-tab>
+  <van-tab title="公示公告">
+    <mp-cells>
+      <mp-cell wx:for="{{signiList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+        <view style="font-size:14px;margin-bottom:8px">
+          <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+          <text style="margin:4px">{{item.date}}</text>
+        </view>
+      </mp-cell>
+    </mp-cells>
+  </van-tab>
+  <van-tab title="学术讲座">
+    <mp-cells>
+      <mp-cell wx:for="{{academicList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+        <view style="font-size:14px;margin-bottom:8px">
+          <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+          <view style="margin:4px">{{item.tutor}}</view>
+          <text style="margin:4px">{{item.date}}</text>
+        </view>
+      </mp-cell>
+    </mp-cells>
+  </van-tab>
+</van-tabs>
+<mp-cells wx:if="{{ Isfoucs && IsInput }}">
+  <mp-cell wx:for="{{searchList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+    <view style="font-size:14px;margin-bottom:8px">
+      <view style="margin:4px;font-weight:bolder">{{item.title}}</view>
+      <text style="margin:4px">{{item.date}}</text>
+    </view>
+  </mp-cell>
+</mp-cells>
+
+<mp-half-screen-dialog
+  bindbuttontap="getButton"
+  title="个人信息使用授权"
+  show="{{showHalfscreen}}"
+  desc="你的个人信息将用于个人页面"
+  buttons="{{buttons}}"
+
+>
+</mp-half-screen-dialog>
