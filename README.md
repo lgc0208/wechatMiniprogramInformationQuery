@@ -1,0 +1,2 @@
+# wecharMiniprogramInformationQuery
+ 基于微信小程序的北邮信息门户实时查询系统
